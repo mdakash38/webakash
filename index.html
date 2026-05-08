@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Md. Akash Portfolio</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+    }
+
+    header{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      background:linear-gradient(135deg,#0f172a,#1e293b);
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:60px;
+      color:#38bdf8;
+      margin-bottom:15px;
+    }
+
+    .hero h2{
+      font-size:28px;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      font-size:18px;
+      color:#cbd5e1;
+      line-height:30px;
+    }
+
+    .profile{
+      width:180px;
+      height:180px;
+      border-radius:50%;
+      object-fit:cover;
+      border:5px solid #38bdf8;
+      margin-bottom:20px;
+    }
+
+    section{
+      padding:70px 20px;
+      text-align:center;
+    }
+
+    .skills h2,
+    .contact h2{
+      font-size:40px;
+      margin-bottom:40px;
+      color:#38bdf8;
+    }
+
+    .skill-box{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:25px;
+    }
+
+    .card{
+      background:#1e293b;
+      width:180px;
+      padding:30px 20px;
+      border-radius:15px;
+      transition:0.3s;
+      box-shadow:0 0 15px rgba(0,0,0,0.3);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      background:#38bdf8;
+      color:black;
+    }
+
+    .card h3{
+      font-size:28px;
+      margin-bottom:10px;
+    }
+
+    .contact-links{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+
+    .contact-links a{
+      text-decoration:none;
+      color:white;
+      background:#1e293b;
+      padding:15px 25px;
+      border-radius:12px;
+      transition:0.3s;
+      font-size:18px;
+    }
+
+    .contact-links a:hover{
+      background:#38bdf8;
+      color:black;
+    }
+
+    footer{
+      background:#020617;
+      padding:20px;
+      text-align:center;
+      color:#94a3b8;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="hero">
+
+      <!-- Your Picture -->
+      <img src="akash.jpg" class="profile">
+
+      <h1>Md. Akash</h1>
+
+      <h2>Software Engineering Student</h2>
+
+      <p>
+        Department of Software Engineering <br>
+        University of Frontier Technology, Bangladesh
+      </p>
+
+    </div>
+  </header>
+
+  <section class="skills">
+
+    <h2>What I Learn</h2>
+
+    <div class="skill-box">
+
+      <div class="card">
+        <h3>C</h3>
+        <p>Programming Language</p>
+      </div>
+
+      <div class="card">
+        <h3>Java</h3>
+        <p>Object Oriented Programming</p>
+      </div>
+
+      <div class="card">
+        <h3>Python</h3>
+        <p>Problem Solving & Development</p>
+      </div>
+
+      <div class="card">
+        <h3>Flutter</h3>
+        <p>Mobile App Development</p>
+      </div>
+
+      <div class="card">
+        <h3>MySQL</h3>
+        <p>Database Management</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="contact">
+
+    <h2>Contact Me</h2>
+
+    <div class="contact-links">
+
+      <a href="https://www.facebook.com/share/1CeVFuVAA7/" target="_blank">
+        Facebook
+      </a>
+
+      <a href="https://wa.me/8801322135538" target="_blank">
+        WhatsApp
+      </a>
+
+      <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=u6lk2nm" target="_blank">
+        Instagram
+      </a>
+
+      <a href="https://github.com/mdakash38" target="_blank">
+        GitHub
+      </a>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Md. Akash | All Rights Reserved
+  </footer>
+
+</body>
+</html>
