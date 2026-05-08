@@ -60,7 +60,7 @@ header{
   color:#38bdf8;
 }
 
-/* PROFILE WITH GLOW FIX */
+/* PROFILE GLOW */
 .profile{
   width:180px;
   height:180px;
@@ -68,19 +68,24 @@ header{
   object-fit:cover;
   border:4px solid #38bdf8;
 
-  /* ✨ GLOW EFFECT FIXED */
-  box-shadow: 0 0 15px #38bdf8,
-              0 0 30px rgba(56,189,248,0.6),
-              0 0 45px rgba(56,189,248,0.3);
+  box-shadow:0 0 15px #38bdf8,
+             0 0 30px rgba(56,189,248,0.6);
 
   animation: glow 2s infinite ease-in-out;
 }
 
-/* ANIMATION */
 @keyframes glow {
-  0% { box-shadow:0 0 10px #38bdf8,0 0 20px rgba(56,189,248,0.3); }
-  50% { box-shadow:0 0 25px #38bdf8,0 0 50px rgba(56,189,248,0.6); }
-  100% { box-shadow:0 0 10px #38bdf8,0 0 20px rgba(56,189,248,0.3); }
+  0% { box-shadow:0 0 10px #38bdf8; }
+  50% { box-shadow:0 0 30px #38bdf8; }
+  100% { box-shadow:0 0 10px #38bdf8; }
+}
+
+/* Animated text */
+.hero h3{
+  color:#94a3b8;
+  font-weight:400;
+  margin-top:8px;
+  min-height:25px;
 }
 
 /* SECTION */
@@ -182,9 +187,13 @@ footer{
 <header id="home">
   <div class="hero">
     <img src="akash.jpg" class="profile">
+
     <h1>Md. Akash</h1>
-  <h2>  <p style="color:#94a3b8;">Software Engineering Student </p> </h2> 
-     <p style="color:#94a3b8;">University of Frontier Technology,Bangladesh </p>
+
+    <!-- Animated lines -->
+    <h3 id="line1"></h3>
+    <h3 id="line2"></h3>
+    <h3 id="line3"></h3>
   </div>
 </header>
 
@@ -260,6 +269,34 @@ footer{
 <footer>
   © 2026 Md. Akash | All Rights Reserved
 </footer>
+
+<!-- ANIMATION SCRIPT -->
+<script>
+const lines = [
+  "University of Frontier Technology, Bangladesh",
+  "Software Engineering Department",
+  "2nd Year, 1st Semester"
+];
+
+function typeText(id, text, delay){
+  let i = 0;
+  let el = document.getElementById(id);
+
+  function typing(){
+    if(i < text.length){
+      el.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing, 50);
+    }
+  }
+
+  setTimeout(typing, delay);
+}
+
+typeText("line1", lines[0], 500);
+typeText("line2", lines[1], 2000);
+typeText("line3", lines[2], 3500);
+</script>
 
 </body>
 </html>
